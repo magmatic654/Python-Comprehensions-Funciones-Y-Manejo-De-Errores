@@ -33,8 +33,12 @@ def add_taxes(item):
     item['taxes'] = item['price'] * .19
     return item
 
-# utilizar map para transformar cada elemento de la lista con una funcion
+# utilizar map para transformar cada elemento de la lista con una función
 new_items = list(map(add_taxes, items))
-print(new_items)
-print(items)
+# print(new_items)
+# print(items)
 ################################################################
+
+# Utilizar list comprehension para transformar cada elemento de la lista con una función
+new_items_v2 = [add_taxes(item) for item in items]
+print(new_items_v2)
