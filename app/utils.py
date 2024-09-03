@@ -12,3 +12,8 @@ def population_by_countrie(data, country):
     return [item for item in data if item['Country/Territory'] == country]
 
 
+def get_total(data):
+    countries = [country['Country/Territory'] for country in data]
+    column = [float(country['World Population Percentage']) for country in data]
+    # total_zip = zip(countries, column)
+    return countries, column
